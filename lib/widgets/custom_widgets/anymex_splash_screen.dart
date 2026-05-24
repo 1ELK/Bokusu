@@ -16,9 +16,6 @@ class _AnymeXSplashScreenState extends State<AnymeXSplashScreen>
     with SingleTickerProviderStateMixin {
   late AnimationController _controller;
 
-  final String logoUrl =
-      'https://app.trickle.so/storage/public/images/anonymous/bb436824-be12-4387-9e49-377574bef5d4.png';
-
   @override
   void initState() {
     super.initState();
@@ -60,8 +57,8 @@ class _AnymeXSplashScreenState extends State<AnymeXSplashScreen>
                     0.2126, 0.7152, 0.0722, 0, 0,
                     0,      0,      0,      1, 0,
                   ]),
-                  child: Image.network(
-                    logoUrl,
+                  child: Image.asset(
+                    'assets/images/bokusu_logo.png',
                     fit: BoxFit.contain,
                   ),
                 ),
@@ -82,8 +79,8 @@ class _AnymeXSplashScreenState extends State<AnymeXSplashScreen>
                     Color(0xFFEAB308),
                     BlendMode.srcATop,
                   ),
-                  child: Image.network(
-                    logoUrl,
+                  child: Image.asset(
+                    'assets/images/bokusu_logo.png',
                     fit: BoxFit.contain,
                   ),
                 ),
