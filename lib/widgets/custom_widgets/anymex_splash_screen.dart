@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:anymex/utils/theme_extensions.dart';
-import 'package:anymex/widgets/custom_widgets/anymex_animated_logo.dart';
 
-/// Splash Screen with Animated Logo
 class AnymeXSplashScreen extends StatefulWidget {
   final VoidCallback? onAnimationComplete;
-  
+
   const AnymeXSplashScreen({
     Key? key,
     this.onAnimationComplete,
@@ -15,21 +12,84 @@ class AnymeXSplashScreen extends StatefulWidget {
   State<AnymeXSplashScreen> createState() => _AnymeXSplashScreenState();
 }
 
-class _AnymeXSplashScreenState extends State<AnymeXSplashScreen> {
+class _AnymeXSplashScreenState extends State<AnymeXSplashScreen>
+    with SingleTickerProviderStateMixin {
+  late AnimationController _controller;
+
+  final String logoUrl =
+      'https://app.trickle.so/storage/public/images/anonymous/bb436824-be12-4387-9e49-377574bef5d4.png';
+
+  @override
+  void initState() {
+    super.initState();
+    _controller = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 2500),
+    )..repeat();
+
+    Future.delayed(const Duration(milliseconds: 2500), () {
+      if (mounted) {
+        widget.onAnimationComplete?.call();
+      }
+    });
+  }
+
+  @override
+  void dispose() {
+    _controller.dispose();
+    super.dispose();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+      backgroundColor: const Color(0xFF111827),
       body: Center(
-        child: AnymeXAnimatedLogo(
-          size: 200,
-          autoPlay: true,
-          onAnimationComplete: () {
-            // Navigate to home after animation
-            Future.delayed(const Duration(milliseconds: 500), () {
-              widget.onAnimationComplete?.call();
-            });
-          },
+        child: SizedBox(
+          width: 320,
+          height: 160,
+          child: Stack(
+            alignment: Alignment.center,
+            children: [
+              Opacity(
+                opacity: 0.3,
+                child: ColorFiltered(
+                  colorFilter: const ColorFilter.matrix(<double>[
+                    0.2126, 0.7152, 0.0722, 0, 0,
+                    0.2126, 0.7152, 0.0722, 0, 0,
+                    0.2126, 0.7152, 0.0722, 0, 0,
+                    0,      0,      0,      1, 0,
+                  ]),
+                  child: Image.network(
+                    logoUrl,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+              AnimatedBuilder(
+                animation: _controller,
+                builder: (context, child) {
+                  return ClipRect(
+                    child: Align(
+                      alignment: Alignment.bottomCenter,
+                      heightFactor: _controller.value,
+                      child: child,
+                    ),
+                  );
+                },
+                child: ColorFiltered(
+                  colorFilter: const ColorFilter.mode(
+                    Color(0xFFEAB308),
+                    BlendMode.srcATop,
+                  ),
+                  child: Image.network(
+                    logoUrl,
+                    fit: BoxFit.contain,
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
