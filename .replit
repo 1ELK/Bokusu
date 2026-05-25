@@ -10,3 +10,6 @@ channel = "stable-25_05"
 
 [userenv.shared]
 AL_CLIENT_ID = "42178"
+
+[deployment]
+deploymentTarget = "cloudrun"
