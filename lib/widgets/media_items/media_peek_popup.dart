@@ -1038,7 +1038,7 @@ class _MediaPeekPopupState extends State<MediaPeekPopup> {
                           children: [
                             Flexible(
                               child: AnymexText(
-                                text: username!,
+                                text: username,
                                 variant: TextVariant.semiBold,
                                 size: 14,
                                 color: colors.primary,

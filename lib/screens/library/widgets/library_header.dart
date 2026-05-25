@@ -7,7 +7,6 @@ import 'package:anymex/screens/library/widgets/library_deps.dart';
 import 'package:anymex/utils/function.dart';
 import 'package:anymex/utils/theme_extensions.dart';
 import 'package:anymex/widgets/custom_widgets/anymex_bottomsheet.dart';
-import 'package:anymex/widgets/custom_widgets/anymex_chip.dart';
 import 'package:anymex/widgets/custom_widgets/custom_expansion_tile.dart';
 import 'package:anymex/widgets/custom_widgets/custom_text.dart';
 import 'package:anymex_extension_runtime_bridge/Models/Source.dart';

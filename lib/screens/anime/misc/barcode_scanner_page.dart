@@ -84,7 +84,7 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
 
       if (foundTitle != null) {
         // Clean title: "One Piece, Vol. 1" -> "One Piece"
-        String cleanTitle = foundTitle!.split(',')[0].split('(')[0].trim();
+        String cleanTitle = foundTitle.split(',')[0].split('(')[0].trim();
         
         if (mounted) {
           Get.off(() => SearchPage(
@@ -191,7 +191,7 @@ class _BarcodeScannerPageState extends State<BarcodeScannerPage> {
                             onPressed: () => Get.back(),
                           ),
                         ),
-                        AnymexText(
+                        const AnymexText(
                           text: "Scan Manga/Novel",
                           variant: TextVariant.bold,
                           color: Colors.white,

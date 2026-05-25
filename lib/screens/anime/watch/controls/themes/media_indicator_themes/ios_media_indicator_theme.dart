@@ -56,13 +56,13 @@ class IosMediaIndicatorTheme extends MediaIndicatorTheme {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    SizedBox(
+                    const SizedBox(
                       width: 80,
                       height: 80,
                       child: CircularProgressIndicator(
                         value: 1.0,
                         strokeWidth: 8,
-                        color: const Color.fromRGBO(0, 0, 0, 0.2),
+                        color: Color.fromRGBO(0, 0, 0, 0.2),
                         strokeCap: StrokeCap.round,
                       ),
                     ),

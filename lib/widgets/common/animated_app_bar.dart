@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:anymex/utils/theme_extensions.dart';
 import 'dart:ui';
 
 class AnimatedAppBar extends StatelessWidget {

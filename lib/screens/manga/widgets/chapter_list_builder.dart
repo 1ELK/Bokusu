@@ -419,10 +419,8 @@ class _ChapterListBuilderState extends State<ChapterListBuilder> {
     var targetChapter = filteredFullChapters
         .firstWhereOrNull((e) => e.link == continueChapter.link);
 
-    if (targetChapter == null) {
-      targetChapter = filteredFullChapters
+    targetChapter ??= filteredFullChapters
           .firstWhereOrNull((e) => e.number == continueChapter.number);
-    }
 
     if (targetChapter == null) {
       return const SizedBox.shrink();
@@ -852,10 +850,10 @@ class ContinueChapterButton extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              'Continue: ${this.chapter.title}'.toUpperCase(),
-              style: this.textStyle ??
+              'Continue: ${chapter.title}'.toUpperCase(),
+              style: textStyle ??
                   TextStyle(
-                    color: this.textColor,
+                    color: textColor,
                     fontFamily: 'Poppins-SemiBold',
                   ),
             ),
@@ -864,7 +862,7 @@ class ContinueChapterButton extends StatelessWidget {
               color: context.colors.primary,
               height: 2,
               width: 6 *
-                  'Chapter ${this.chapter.number}: ${this.chapter.title}'
+                  'Chapter ${chapter.number}: ${chapter.title}'
                       .length
                       .toDouble(),
             ),

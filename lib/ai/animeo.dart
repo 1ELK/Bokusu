@@ -113,7 +113,7 @@ Future<List<Media>> getAiRecommendations(
 
   for (final recList in resultsList) {
     for (final media in recList) {
-      if (media.id != null && !trackedIds.contains(media.id)) {
+      if (!trackedIds.contains(media.id)) {
         bool isDuplicate = false;
         for (final existingId in uniqueMap.keys) {
           if (existingId == media.id) {

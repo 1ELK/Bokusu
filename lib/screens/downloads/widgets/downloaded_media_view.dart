@@ -1,4 +1,3 @@
-import 'package:anymex/controllers/service_handler/service_handler.dart';
 import 'package:anymex/database/isar_models/offline_media.dart';
 import 'package:anymex/models/Media/media.dart';
 import 'package:anymex/screens/downloads/controller/download_controller.dart';

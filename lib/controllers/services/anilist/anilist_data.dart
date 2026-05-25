@@ -256,7 +256,7 @@ class AnilistData extends GetxController implements BaseService, OnlineService {
           return const SizedBox.shrink();
         }
         return buildUnderratedSection('Community Recommendations', filteredList,
-            onSeeAll: () => navigate(() => CommunityRecommendationsPage(
+            onSeeAll: () => navigate(() => const CommunityRecommendationsPage(
                   category: 'anime',
                   type: ItemType.anime,
                 )));
@@ -285,7 +285,7 @@ class AnilistData extends GetxController implements BaseService, OnlineService {
         }
         return buildUnderratedMangaSection(
             'Community Recommendations', filteredList,
-            onSeeAll: () => navigate(() => CommunityRecommendationsPage(
+            onSeeAll: () => navigate(() => const CommunityRecommendationsPage(
                   category: 'manga',
                   type: ItemType.manga,
                 )));

@@ -480,7 +480,7 @@ class _GridAnimeCardState extends State<GridAnimeCard> {
                                       child: s.name
                                               .toLowerCase()
                                               .contains('apple')
-                                          ? AnymeXImage(
+                                          ? const AnymeXImage(
                                               imageUrl:
                                                   "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVCJpAHzn91VMfwirwAbAmV-ONO02UjmCj2w&s",
                                               height: 20,

@@ -321,11 +321,14 @@ class BottomControls extends StatelessWidget {
         if (id == 'source' &&
             (controller.isOffline.value ||
                 (serverCount <= 1 &&
-                    controller.getCurrentStreamSubtitleOptions().isEmpty)))
+                    controller.getCurrentStreamSubtitleOptions().isEmpty))) {
           continue;
+        }
         if (id == 'tracks' &&
             (controller.embeddedAudioTracks.value.isEmpty &&
-                controller.embeddedSubs.value.isEmpty)) continue;
+                controller.embeddedSubs.value.isEmpty)) {
+          continue;
+        }
         if (id == 'orientation' && !(Platform.isAndroid || Platform.isIOS)) {
           continue;
         }

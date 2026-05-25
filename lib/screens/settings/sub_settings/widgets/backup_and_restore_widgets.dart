@@ -400,7 +400,7 @@ class UserInfoCard extends StatelessWidget {
                         fit: BoxFit.cover,
                         radius: 0,
                       )
-                    : DefaultAvatar(),
+                    : const DefaultAvatar(),
               ),
             ),
             const SizedBox(width: 16),

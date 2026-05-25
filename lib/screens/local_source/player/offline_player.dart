@@ -7,9 +7,7 @@ import 'package:anymex/screens/anime/watch/controls/themes/setup/themed_controls
 import 'package:anymex/screens/anime/watch/controls/widgets/double_tap_seek.dart';
 import 'package:anymex/screens/anime/watch/controls/widgets/episodes_pane.dart';
 import 'package:anymex/screens/anime/watch/controls/widgets/overlay.dart';
-import 'package:anymex/screens/anime/watch/controls/widgets/source_popup.dart';
 import 'package:anymex/screens/anime/watch/controls/widgets/subtitle_text.dart';
-import 'package:anymex/screens/anime/watch/controls/widgets/sync_subs_popup.dart';
 import 'package:anymex/screens/anime/watch/controls/widgets/tracks_popup.dart';
 import 'package:anymex/screens/anime/widgets/media_indicator.dart';
 import 'package:anymex/screens/anime/watch/controls/widgets/shader_osd.dart';

@@ -15,14 +15,14 @@ class AnymeXAnimatedLogo extends StatefulWidget {
   final LogoAnimationType? forceAnimationType;
 
   const AnymeXAnimatedLogo({
-    Key? key,
+    super.key,
     this.size = 200,
     this.autoPlay = true,
     this.onAnimationComplete,
     this.color,
     this.gradient,
     this.forceAnimationType,
-  }) : super(key: key);
+  });
 
   @override
   State<AnymeXAnimatedLogo> createState() => _AnymeXAnimatedLogoState();
@@ -596,7 +596,7 @@ class _AnymeXAnimatedLogoState extends State<AnymeXAnimatedLogo>
     final assemblyPhase = adjustedProgress;
     final logoPhase = (adjustedProgress - 0.7).clamp(0.0, 0.3) / 0.3;
 
-    final gridSize = 10;
+    const gridSize = 10;
     final pixels = <Widget>[];
 
     for (int i = 0; i < gridSize; i++) {
@@ -887,10 +887,10 @@ class _AnymeXAnimatedLogoState extends State<AnymeXAnimatedLogo>
     final formPhase = (adjustedProgress - 0.4).clamp(0.0, 0.6) / 0.6;
     final logoPhase = (adjustedProgress - 0.7).clamp(0.0, 0.3) / 0.3;
 
-    final columns = 15;
+    const columns = 15;
     final rainDrops = List.generate(columns, (col) {
       final drops = <Widget>[];
-      final dropsPerColumn = 8;
+      const dropsPerColumn = 8;
 
       for (int row = 0; row < dropsPerColumn; row++) {
         final random = math.Random(col * 100 + row);

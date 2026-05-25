@@ -1,4 +1,3 @@
-import 'package:anymex/screens/downloads/download_screen.dart';
 import 'package:anymex/screens/other_features.dart';
 import 'package:anymex/screens/settings/search/settings_registry.dart';
 import 'package:anymex/screens/settings/search/settings_search_icons.dart';
@@ -8,7 +7,6 @@ import 'package:anymex/screens/settings/sub_settings/settings_backup.dart';
 import 'package:anymex/screens/settings/sub_settings/settings_common.dart';
 import 'package:anymex/screens/settings/sub_settings/settings_downloads.dart';
 import 'package:anymex/screens/settings/sub_settings/settings_extensions.dart';
-import 'package:anymex/database/data_keys/keys.dart';
 import 'package:anymex/screens/settings/sub_settings/settings_logs.dart';
 import 'package:anymex/screens/settings/sub_settings/settings_player.dart';
 import 'package:anymex/screens/settings/sub_settings/settings_reader.dart';

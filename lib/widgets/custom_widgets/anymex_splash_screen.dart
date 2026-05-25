@@ -4,9 +4,9 @@ class AnymeXSplashScreen extends StatefulWidget {
   final VoidCallback? onAnimationComplete;
 
   const AnymeXSplashScreen({
-    Key? key,
+    super.key,
     this.onAnimationComplete,
-  }) : super(key: key);
+  });
 
   @override
   State<AnymeXSplashScreen> createState() => _AnymeXSplashScreenState();

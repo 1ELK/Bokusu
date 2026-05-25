@@ -966,7 +966,7 @@ class PlayerController extends GetxController with WidgetsBindingObserver {
     }));
 
     _playerSubscriptions.add(_basePlayer.errorStream.listen((e) {
-      Logger.i('${e} => ${selectedVideo.value?.headers}');
+      Logger.i('$e => ${selectedVideo.value?.headers}');
       final errorStr = e.toString();
       if (errorStr.contains('Failed to open') &&
           !errorStr.contains('.glsl') &&

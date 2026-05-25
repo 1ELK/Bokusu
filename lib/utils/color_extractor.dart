@@ -114,7 +114,7 @@ class ImageColorExtractor {
     final pixels = byteData.buffer.asUint8List();
     final Map<int, int> colorCount = {};
 
-    final step = 10;
+    const step = 10;
 
     for (int i = 0; i < pixels.length; i += 4 * step) {
       final r = pixels[i];

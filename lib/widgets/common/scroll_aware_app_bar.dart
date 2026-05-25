@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:anymex/utils/theme_extensions.dart';
 import 'package:flutter/services.dart';
 
 import 'package:anymex/mixins/scroll_aware_app_bar_mixin.dart';

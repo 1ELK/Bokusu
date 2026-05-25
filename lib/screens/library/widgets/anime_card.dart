@@ -25,7 +25,7 @@ class AnimeCard extends StatelessWidget {
       onTap: () {
         navigate(() => AnimeDetailsPage(
             media: Media.fromOfflineMedia(data, ItemType.anime),
-            tag: '${data.id!}${UniqueKey().toString()}'));
+            tag: '${data.id}${UniqueKey().toString()}'));
       },
       child: Container(
         clipBehavior: Clip.antiAlias,

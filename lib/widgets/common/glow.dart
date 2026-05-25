@@ -1,6 +1,5 @@
 // ignore_for_file: deprecated_member_use
 import 'dart:io';
-import 'dart:math';
 
 import 'package:anymex/controllers/settings/methods.dart';
 import 'package:anymex/controllers/settings/settings.dart';

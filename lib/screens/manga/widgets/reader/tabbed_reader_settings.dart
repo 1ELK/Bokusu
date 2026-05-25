@@ -7,7 +7,6 @@ import 'package:anymex/screens/settings/sub_settings/settings_tap_zones.dart';
 import 'package:anymex/utils/function.dart';
 import 'package:anymex/utils/theme_extensions.dart';
 import 'package:anymex/widgets/common/custom_tiles.dart';
-import 'package:anymex/widgets/non_widgets/reusable_checkmark.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:iconsax/iconsax.dart';
